@@ -1,0 +1,255 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NuelDias Tech Services — Innovation, qualité et passion</title>
+  <meta name="description" content="NuelDias Tech Services - Réparation, vente multimédia, design & développement web/mobile. Contact: emanuelcodjia@gmail.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --accent-2:#7c3aed;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;padding:0;font-family:'Inter',system-ui;color:#e6eef6;background:linear-gradient(180deg,var(--bg) 0%, #07101a 100%);
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo img{width:60px;height:60px;border-radius:12px;box-shadow:0 6px 18px rgba(124,58,237,0.2)}
+.brand h1{margin:0;font-size:20px;letter-spacing:0.4px}
+.brand p{margin:0;font-size:12px;color:var(--muted)}
+nav a{color:#cfeffd;text-decoration:none;margin-left:18px;font-weight:600}
+.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#031225;font-weight:700;text-decoration:none}
+
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px;padding:28px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:700;font-size:12px}
+.hero h2{margin:14px 0 8px;font-size:28px;color:white}
+.hero p{color:var(--muted);margin:0 0 18px}
+.hero .actions{display:flex;gap:12px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));padding:18px;border-radius:12px;color:#dff6fb}
+.card h3{margin:8px 0;font-size:16px}
+.card p{color:var(--muted);font-size:13px}
+.icon{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,0.03);margin-bottom:10px}
+
+.portfolio{margin-top:30px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.thumb{height:180px;border-radius:10px;overflow:hidden;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.thumb:hover img{transform:scale(1.08)}
+.thumb span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);padding:8px;color:#fff;font-size:13px;text-align:center}
+
+.testimonials{margin-top:40px;padding:20px 0}
+.testimonials h2{color:white;text-align:center;margin-bottom:30px}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testimonial-card{background:linear-gradient(180deg,var(--card),rgba(255,255,255,0.01));padding:24px;border-radius:12px;position:relative}
+.testimonial-quote{color:var(--accent);font-size:40px;position:absolute;top:10px;right:20px}
+.testimonial-text{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:15px}
+.testimonial-author{display:flex;align-items:center;gap:10px}
+.author-avatar{width:50px;height:50px;border-radius:25px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--bg)}
+.author-info{display:flex;flex-direction:column}
+.author-name{color:white;font-weight:600}
+.author-location{color:var(--muted);font-size:12px}
+
+.contact{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:30px}
+.contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.field{display:flex;flex-direction:column;margin-bottom:10px}
+input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#dff6fb}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#031225;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+
+footer{padding:20px 0;color:var(--muted);font-size:13px;text-align:center}
+
+@media(max-width:980px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} .portfolio-grid{grid-template-columns:repeat(2,1fr)} .contact{grid-template-columns:1fr} nav{display:none}}
+@media(max-width:560px){.grid{grid-template-columns:1fr} .portfolio-grid{grid-template-columns:1fr}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="images/Sans titre (1).png" alt="Logo NuelDias"></div>
+        <div>
+          <h1>NUELDIAS TECH SERVICES</h1>
+          <p>Innovation, qualité et passion au service de vos projets</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact" class="cta">Contactez-nous</a>
+      </nav>
+    </header><section class="hero">
+  <div class="hero-card">
+    <span class="eyebrow">Solutions & Services</span>
+    <h2>Des solutions technologiques complètes — Réparation, Conception & Multimédia</h2>
+    <p>Nous réparons vos appareils, créons des sites et applications modernes, et fournissons du contenu multimédia à la demande — le tout à prix raisonnable.</p>
+    <div class="actions">
+      <a href="#contact" class="btn">Demander un devis</a>
+      <a href="#portfolio" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Voir nos réalisations</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <h3>Service en avant</h3>
+    <p>Création de comptes TikTok authentiques (créés uniquement en France par un de nos agents — sans VPN ni automatisation).</p>
+  </aside>
+</section>
+
+<section id="services">
+  <h2 style="color:white">Nos services</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Réparation & Maintenance</h3>
+      <p>Appareils Android, petits appareils électroniques, PC et laptops. Installation de systèmes et logiciels.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>Vente Multimédia</h3>
+      <p>Films, séries, animés, jeux, et contenu multimédia sur demande.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>Conception & Design</h3>
+      <p>Sites web modernes, applications mobiles, affiches publicitaires professionnelles.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔐</div>
+      <h3>Comptes TikTok Authentiques</h3>
+      <p>Création de comptes TikTok créés exclusivement en France par nos agents (aucun VPN).</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <h2 style="color:white">Nos Réalisations</h2>
+  <div class="portfolio-grid">
+    <div class="thumb"><img src="images/guide-pratique-de-la-reparation-d26rsquo3Bordinateur-portable.jpg" alt="Réparation d'ordinateurs"><span>Réparation d'ordinateurs</span></div>
+    <div class="thumb"><img src="images/conception-de-site-web-2.jpg" alt="Conception de site web"><span>Conception de site web</span></div>
+    <div class="thumb"><img src="images/mobile-app-2022-scaled.jpg" alt="Développement d'application mobile"><span>Développement d'application mobile</span></div>
+    <div class="thumb"><img src="images/Campagne-affichage-exterieur.jpg" alt="Création d'affiche publicitaire"><span>Création d'affiche publicitaire</span></div>
+    <div class="thumb"><img src="images/Retouche-video-et-photo-pour-le-community-manager.jpg.webp" alt="Vente de contenu multimédia"><span>Vente de contenu multimédia</span></div>
+    <div class="thumb"><img src="images/1_eFlQGU6PoOtNaj5eri2unQ.png" alt="Création de compte TikTok"><span>Création de compte TikTok authentique</span></div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <h2>Ce que disent nos clients béninois</h2>
+  <div class="testimonials-grid">
+    
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        Le service de réparation de NuelDias est exceptionnel. Mon ordinateur était en panne et ils l'ont réparé en un temps record. Très professionnel et prix abordable !
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: var(--accent)">KA</div>
+        <div class="author-info">
+          <div class="author-name">Kossi Ahoueya</div>
+          <div class="author-location">Cotonou, Bénin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        J'ai fait appel à leurs services pour la création de mon site web de commerce en ligne. Le résultat est magnifique et mon business en ligne marche très bien maintenant.
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: var(--accent-2)">AS</div>
+        <div class="author-info">
+          <div class="author-name">Armelle Sossa</div>
+          <div class="author-location">Calavi, Bénin</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        Leur service de création de comptes TikTok est vraiment fiable. Les comptes sont authentiques et créés en France comme promis. Je recommande vivement !
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar" style="background: var(--accent)">BK</div>
+        <div class="author-info">
+          <div class="author-name">Brice Koudogbo</div>
+          <div class="author-location">Porto-Novo, Bénin</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-card">
+    <h3>Contactez-nous</h3>
+    <form onsubmit="handleForm(event)">
+      <div class="field"><label>Nom</label><input type="text" id="name" placeholder="Votre nom" required></div>
+      <div class="field"><label>Email</label><input type="email" id="email" placeholder="votre@email.com" required></div>
+      <div class="field"><label>Message</label><textarea id="message" rows="5" placeholder="Expliquez votre projet..."></textarea></div>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+  </div>
+  <aside class="contact-card">
+    <h3>Informations</h3>
+    <p><strong>Adresse :</strong>Bénin Cotonou Cadjèhoun, von derrière Home Residence Hôtel</p>
+    <p><strong>Téléphones :</strong> +229 0143082595 • +229 54143269 • +229 59845535</p>
+    <p><strong>Email :</strong> emanuelcodjia@gmail.com</p>
+    <p><strong>Réseaux :</strong> <a href="https://www.facebook.com/share/17gAktVyYM/" style="color:var(--accent)">Facebook</a> • <a href="https://www.instagram.com/nuelcdj?igsh=eWt5MDJkYTVkdjhr" style="color:var(--accent)">Instagram</a></p>
+  </aside>
+</section>
+
+<footer>
+  © <span id="year"></span> NuelDias Tech Services — Innovation, qualité et passion au service de vos projets.
+</footer>
+
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    (function() {
+      emailjs.init("ZcY2uMwhAfWKC0PK-");
+    })();
+
+    async function handleForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      try {
+        const response = await emailjs.send(
+          "service_ygnsbip",
+          "template_uepdggl",
+          {
+            from_name: name,
+            reply_to: email,
+            message: message,
+            to_email: "emanuelcodjia@gmail.com"
+          }
+        );
+
+        console.log('Email envoyé avec succès:', response);
+        alert('Merci ' + name + '! Votre message a été envoyé à notre email.');
+      } catch (error) {
+        console.error('Erreur détaillée:', error);
+        alert('Erreur lors de l\'envoi du message: ' + error.text || error.message);
+      }
+
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

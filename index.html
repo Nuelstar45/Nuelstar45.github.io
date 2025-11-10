@@ -91,8 +91,60 @@ footer{padding:20px 0;color:var(--muted);font-size:13px;text-align:center}
     </header><section class="hero">
   <div class="hero-card">
     <span class="eyebrow">Solutions & Services</span>
-    <h2>Des solutions technologiques complètes — Réparation, Conception & Multimédia</h2>
-    <p>Nous réparons vos appareils, créons des sites et applications modernes, et fournissons du contenu multimédia à la demande — le tout à prix raisonnable.</p>
+      <h2 style="
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  
+  margin-bottom: 12px;
+">
+ <style>
+  .hero-title {
+    
+    font-size: 20px;
+    font-weight: 500;
+    color: #06b6d4;
+    margin-bottom: 12px;
+    line-height: 3.103;
+    text-transform: none; /* ou uppercase si tu veux tout en majuscules */
+  }
+  @media (max-width: 600px) {
+    .hero-title { font-size: 26px; }
+  }
+</style>
+
+<strong class="hero-title">
+  Des solutions technologiques complètes:
+</strong>
+
+  <span id="mots" style="color:#ffd166;"></span><span class="cursor" style="
+    display:inline-block;
+    width:3px;
+    height:1.1em;
+    background:#ffd166;
+    margin-left:3px;
+    animation: blink 1s steps(2, start) infinite;
+  "></span>
+</h2>
+
+<script>
+  const mots = ["Réparation", "Conception", "Multimédia"];
+  let index = 0;
+  const el = document.getElementById("mots");
+
+  function afficherMot() {
+    el.textContent = mots[index];
+    index = (index + 1) % mots.length;
+  }
+
+  afficherMot();
+  setInterval(afficherMot, 2000);
+
+  const style = document.createElement("style");
+  style.textContent = "@keyframes blink { to { visibility: hidden; } }";
+  document.head.appendChild(style);
+</script>
     <div class="actions">
       <a href="#contact" class="btn">Demander un devis</a>
       <a href="#portfolio" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Voir nos réalisations</a>
@@ -254,5 +306,6 @@ footer{padding:20px 0;color:var(--muted);font-size:13px;text-align:center}
 </body>
 
 </html>
+
 
 

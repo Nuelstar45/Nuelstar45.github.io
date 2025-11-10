@@ -76,20 +76,82 @@ footer{padding:20px 0;color:var(--muted);font-size:13px;text-align:center}
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo"><img src="Sans titre (1).png" alt="Logo NuelDias"></div>
-        <div>
-          <h1>NUELDIAS TECH SERVICES</h1>
-          <p>Innovation, qualité et passion au service de vos projets</p>
-        </div>
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact" class="cta">Contactez-nous</a>
-      </nav>
-    </header><section class="hero">
+<header id="mainHeader">
+  <div class="brand">
+    <div class="logo"><img src="images/Sans titre (1).png" alt="Logo NuelDias"></div>
+    <div>
+      <h1>NUELDIAS TECH SERVICES</h1>
+      <p>Innovation, qualité et passion au service de vos projets</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact" class="cta">Contactez-nous</a>
+  </nav>
+</header>
+
+<style>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: transparent; /* couleur initiale */
+  transition: background-color 0.4s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background-color: white; /* couleur au scroll */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav a.cta {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+nav a.cta:hover {
+  background-color: #0056b3;
+}
+</style>
+
+<script>
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('mainHeader');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
+
+    <section class="hero">
   <div class="hero-card">
  
 
@@ -310,6 +372,7 @@ footer{padding:20px 0;color:var(--muted);font-size:13px;text-align:center}
 </body>
 
 </html>
+
 
 
 

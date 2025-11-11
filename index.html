@@ -49,6 +49,19 @@ nav a{color:#cfeffd;text-decoration:none;margin-left:18px;font-weight:600}
 .thumb:hover img{transform:scale(1.08)}
 .thumb span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);padding:8px;color:#fff;font-size:13px;text-align:center}
 
+/* Make section titles feel tappable */
+.section-title{display:inline-block;padding:8px 12px;border-radius:8px;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+.section-title:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(6,182,212,0.08)}
+.section-title:active{transform:translateY(0) scale(.98);opacity:.95}
+.section-title.in-view{box-shadow:0 12px 40px rgba(6,182,212,0.12);background:rgba(6,182,212,0.03)}
+
+/* Cards and thumbs should look tappable on mobile */
+.card, .thumb{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.card:active, .thumb:active{transform:translateY(2px) scale(.995)}
+.thumb img{transition:transform .4s ease}
+.thumb:hover img{transform:scale(1.08)}
+.thumb:active img{transform:scale(1.02)}
+
 .testimonials{margin-top:40px;padding:20px 0}
 .testimonials h2{color:white;text-align:center;margin-bottom:30px}
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -255,7 +268,7 @@ window.addEventListener('scroll', function() {
 </section>
 
 <section id="services">
-  <h2 style="color:white">Nos services</h2>
+  <h2 class="section-title">Nos services</h2>
   <div class="grid">
     <div class="card">
       <div class="icon">🔧</div>
@@ -281,7 +294,7 @@ window.addEventListener('scroll', function() {
 </section>
 
 <section id="portfolio" class="portfolio">
-  <h2 style="color:white">Vue de nos services</h2>
+  <h2 class="section-title">Vue de nos services</h2>
   <div class="portfolio-grid">
     <div class="thumb"><img src="guide-pratique-de-la-reparation-d26rsquo3Bordinateur-portable.jpg" alt="Réparation d'ordinateurs"><span>Réparation d'ordinateurs</span></div>
     <div class="thumb"><img src="conception-de-site-web-2.jpg" alt="Conception de site web"><span>Conception de site web</span></div>
@@ -401,10 +414,36 @@ window.addEventListener('scroll', function() {
       e.target.reset();
     }
   </script>
+    <script>
+      // IntersectionObserver pour surligner les titres quand la section est visible
+      (function(){
+        const options = { root: null, rootMargin: '0px', threshold: 0.45 };
+        const observer = new IntersectionObserver((entries)=>{
+          entries.forEach(entry=>{
+            const h = entry.target.querySelector('h2');
+            if(!h) return;
+            if(entry.isIntersecting){
+              h.classList.add('in-view');
+            } else {
+              h.classList.remove('in-view');
+            }
+          });
+        }, options);
+
+        const sections = document.querySelectorAll('section#services, section#portfolio');
+        sections.forEach(s=>observer.observe(s));
+
+        // rendre les titres cliquables : scroll smooth
+        document.querySelectorAll('.section-title').forEach(title=>{
+          title.addEventListener('click', ()=>{
+            title.scrollIntoView({behavior:'smooth', block:'start'});
+          });
+        });
+      })();
+    </script>
 </body>
 
 </html>
-
 
 
 
